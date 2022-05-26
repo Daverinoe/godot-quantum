@@ -10,6 +10,8 @@ func _init(r_0 : float = 0.0, i_0: float = 0.0) -> void:
 	self.imag = i_0
 
 func _to_string() -> String:
+	if self.real == 0 and self.imag == 0:
+		return "0"
 	var re = "%.2f" % self.real
 	var im = "%.2f i" % self.imag
 	var isign = " + "
